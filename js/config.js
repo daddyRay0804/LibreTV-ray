@@ -12,8 +12,8 @@ const PASSWORD_CONFIG = {
 
 // 网站信息配置
 const SITE_CONFIG = {
-    name: 'LibreTV',
-    url: 'https://libretv.is-an.org',
+    name: 'XrayTV',
+    url: 'https://xraytv.is-an.org',
     description: '免费在线视频搜索与观看平台',
     logo: 'https://images.icon-icons.com/38/PNG/512/retrotv_5520.png',
     version: '1.0.3'
@@ -185,10 +185,20 @@ const SECURITY_CONFIG = {
     // allowedApiDomains 不再需要，因为所有请求都通过内部代理
 };
 
-// 添加多个自定义API源的配置
+// 禁用自定义API源的配置
+// const CUSTOM_API_CONFIG = {
+//     separator: ',',           // 分隔符
+//     maxSources: 5,            // 最大允许的自定义源数量
+//     testTimeout: 5000,        // 测试超时时间(毫秒)
+//     namePrefix: 'Custom-',    // 自定义源名称前缀
+//     validateUrl: true,        // 验证URL格式
+//     cacheResults: true,       // 缓存测试结果
+//     cacheExpiry: 5184000000,  // 缓存过期时间(2个月)
+//     adultPropName: 'isAdult' // 用于标记成人内容的属性名
+// };
 const CUSTOM_API_CONFIG = {
     separator: ',',           // 分隔符
-    maxSources: 5,            // 最大允许的自定义源数量
+    maxSources: 0,            // 禁用自定义源
     testTimeout: 5000,        // 测试超时时间(毫秒)
     namePrefix: 'Custom-',    // 自定义源名称前缀
     validateUrl: true,        // 验证URL格式

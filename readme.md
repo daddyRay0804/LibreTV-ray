@@ -1,8 +1,8 @@
-# LibreTV - 免费在线视频搜索与观看平台
+# XrayTV - 免费在线视频搜索与观看平台
 
 ## 📺 项目简介
 
-LibreTV是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目结合了前端技术和后端代理功能，可部署在支持服务端功能的各类网站托管服务上。
+XrayTV是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目结合了前端技术和后端代理功能，可部署在支持服务端功能的各类网站托管服务上。
 
 本项目基于 https://github.com/bestK/tv
 
@@ -27,7 +27,7 @@ LibreTV是一个轻量级、免费的在线视频搜索与观看平台，提供�
 
 ## ⌨️ 键盘快捷键
 
-LibreTV播放器支持以下键盘快捷键：
+XrayTV播放器支持以下键盘快捷键：
 
 - **Alt + 左箭头**：播放上一集
 - **Alt + 右箭头**：播放下一集
@@ -62,7 +62,7 @@ LibreTV播放器支持以下键盘快捷键：
 
 ## 🚀 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FLibreTV)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdaddyRay0804%2FLibreTV-ray)
 
 ## 🚀 部署指南
 
@@ -104,8 +104,8 @@ npx http-server -p 8080
 ### Docker 部署
 
 ```bash
-docker pull bestzwei/libretv:latest
-docker run -d --name libretv -p 8899:80 bestzwei/libretv:latest
+docker pull bestzwei/xraytv:latest
+docker run -d --name xraytv -p 8899:80 bestzwei/xraytv:latest
 ```
 
 访问 http://localhost:8899 查看效果。
@@ -117,9 +117,9 @@ docker run -d --name libretv -p 8899:80 bestzwei/libretv:latest
 ```yaml
 version: '3'
 services:
-  libretv:
-    image: bestzwei/libretv:latest
-    container_name: libretv
+  xraytv:
+    image: bestzwei/xraytv:latest
+    container_name: xraytv
     ports:
       - "8899:80"
     restart: unless-stopped
@@ -129,7 +129,7 @@ services:
 
 ### 密码保护功能
 
-LibreTV 现在支持密码保护功能，可以通过环境变量设置访问密码。当设置了 `PASSWORD` 环境变量后，用户首次访问网站时需要输入密码才能继续使用。
+XrayTV 现在支持密码保护功能，可以通过环境变量设置访问密码。当设置了 `PASSWORD` 环境变量后，用户首次访问网站时需要输入密码才能继续使用。
 
 - 如果 `PASSWORD` 环境变量为空或未设置，将不启用密码保护。
 - 密码验证状态会保存在浏览器本地存储中，有效期默认为三个月。
@@ -162,7 +162,7 @@ LibreTV 现在支持密码保护功能，可以通过环境变量设置访问密
 
 ```bash
 # 使用 Docker 命令
-docker run -d --name libretv -p 8899:80 -e PASSWORD=your_password_here bestzwei/libretv:latest
+docker run -d --name xraytv -p 8899:80 -e PASSWORD=your_password_here bestzwei/xraytv:latest
 ```
 
 使用 Docker Compose，在 `docker-compose.yml` 文件中设置:
@@ -170,9 +170,9 @@ docker run -d --name libretv -p 8899:80 -e PASSWORD=your_password_here bestzwei/
 ```yaml
 version: '3'
 services:
-  libretv:
-    image: bestzwei/libretv:latest
-    container_name: libretv
+  xraytv:
+    image: bestzwei/xraytv:latest
+    container_name: xraytv
     ports:
       - "8899:80"
     environment:
@@ -196,11 +196,11 @@ python -m http.server 8080
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=LibreSpark/LibreTV&type=Date)](https://www.star-history.com/#LibreSpark/LibreTV&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=daddyRay0804/LibreTV-ray&type=Date)](https://www.star-history.com/#daddyRay0804/LibreTV-ray&Date)
 
 ## ⚠️ 免责声明
 
-LibreTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方API接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
+XrayTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方API接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
 
 ## 🔄 更新日志
 

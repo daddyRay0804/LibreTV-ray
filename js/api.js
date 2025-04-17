@@ -1,6 +1,7 @@
 // 改进的API请求处理函数
 async function handleApiRequest(url) {
-    const customApi = url.searchParams.get('customApi') || '';
+    // 禁用自定义API功能
+    const customApi = '';
     const source = url.searchParams.get('source') || 'heimuer';
     
     try {
@@ -10,18 +11,13 @@ async function handleApiRequest(url) {
                 throw new Error('缺少搜索参数');
             }
             
-            // 验证API和source的有效性
-            if (source === 'custom' && !customApi) {
-                throw new Error('使用自定义API时必须提供API地址');
-            }
-            
-            if (!API_SITES[source] && source !== 'custom') {
+            // 验证API和source的有效性 - 禁用自定义API
+            if (!API_SITES[source]) {
                 throw new Error('无效的API来源');
             }
             
-            const apiUrl = customApi
-                ? `${customApi}${API_CONFIG.search.path}${encodeURIComponent(searchQuery)}`
-                : `${API_SITES[source].api}${API_CONFIG.search.path}${encodeURIComponent(searchQuery)}`;
+            // 禁用自定义API功能
+            const apiUrl = `${API_SITES[source].api}${API_CONFIG.search.path}${encodeURIComponent(searchQuery)}`;
             
             // 添加超时处理
             const controller = new AbortController();
