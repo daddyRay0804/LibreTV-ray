@@ -1,0 +1,64 @@
+/* 组件层级管理 */
+.history-panel {
+  z-index: 40;
+}
+
+.resource-panel {
+  z-index: 45;
+}
+
+.chat-widget {
+  z-index: 50;
+}
+
+/* 确保所有面板都有正确的背景和边框 */
+.panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .panel {
+    width: 90vw;
+    max-width: 100%;
+  }
+  
+  .history-panel {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .resource-panel {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .chat-widget {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* 桌面端适配 */
+@media (min-width: 641px) {
+  .panel {
+    width: 450px;
+  }
+  
+  .history-panel {
+    bottom: 30px;
+    left: 30px;
+  }
+  
+  .resource-panel {
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .chat-widget {
+    bottom: 30px;
+    right: 30px;
+  }
+} 
