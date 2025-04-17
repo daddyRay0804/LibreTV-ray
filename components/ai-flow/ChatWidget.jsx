@@ -30,7 +30,7 @@ const ChatWidget = ({ isMinimized, onMinimize, onClose }) => {
     } sm:w-[450px] md:w-[500px]`}>
       {/* 头部 */}
       <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI 观影助手</h3>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">观影小助手</h3>
         <div className="flex space-x-2">
           <button
             type="button"
@@ -99,7 +99,7 @@ const ChatWidget = ({ isMinimized, onMinimize, onClose }) => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="输入您想看的影视类型..."
-            className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-700 dark:border-gray-600 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
           />
           <button
             type="submit"
